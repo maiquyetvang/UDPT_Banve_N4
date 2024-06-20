@@ -8,14 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="AuthenticationService" />
-        <module name="AuthService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="RegistryServer" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="AuthService" options="-parameters" />
       <module name="AuthenticationService" options="-parameters" />
+      <module name="RegistryServer" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
     </option>
   </component>
