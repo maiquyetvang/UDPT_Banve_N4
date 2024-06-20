@@ -1,33 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/response/UserCreationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/configuration/AuthenticationFiller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/dto/request/IntrospectRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/dto/response/IntrospectResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/repository/AuthenticationClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/AuthenticationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/AuthenticationServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/src/main/java/com/udpt_banve/RegistryServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/RegistryServer/src/test/java/com/udpt_banve/RegistryServerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/demo">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MicroService/AuthenticationService" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2i5pnZGodvBgWbns7ILkM1klNHY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.AuthenticationService [clean].executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Api Gateway.executor": "Run",
+    "Spring Boot.ApiGateway.executor": "Run",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.AuthService.executor": "Run",
+    "Spring Boot.Authentication Service.executor": "Run",
+    "Spring Boot.AuthenticationService.executor": "Run",
+    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.RegistryServer.executor": "Run",
+    "Spring Boot.RegistryServerApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService",
+    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/RegistryServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.udpt_banve.authenticationservice.dto.response" />
+      <recent name="com.udpt_banve.apigateway.dto.response" />
+      <recent name="com.udpt_banve.apigateway.dto.request" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Authentication Service">
+    <configuration name="Api Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Authentication Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="AuthenticationService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.authenticationservice.AuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Api Gateway" />
+      <item itemvalue="Spring Boot.Authentication Service" />
+    </list>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -45,6 +183,17 @@
       <option name="presentableId" value="Default" />
       <updated>1718790459198</updated>
       <workItem from="1718790460244" duration="9000" />
+      <workItem from="1718806357049" duration="2197000" />
+      <workItem from="1718808567574" duration="72000" />
+      <workItem from="1718808644381" duration="98000" />
+      <workItem from="1718808903393" duration="143000" />
+      <workItem from="1718809166137" duration="196000" />
+      <workItem from="1718809381087" duration="219000" />
+      <workItem from="1718811367278" duration="166000" />
+      <workItem from="1718811748650" duration="684000" />
+      <workItem from="1718835355362" duration="207000" />
+      <workItem from="1718835573149" duration="8603000" />
+      <workItem from="1718892650686" duration="5138000" />
     </task>
     <servers />
   </component>
