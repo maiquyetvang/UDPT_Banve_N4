@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/request/UserCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/response/UserCreationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/response/UserCreationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/dto/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/AuthService/src/main/java/com/udpt_banve/authservice",
+    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/AuthenticationService",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,6 +95,11 @@
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -171,7 +174,7 @@
       <workItem from="1718835573149" duration="8603000" />
       <workItem from="1718892650686" duration="6201000" />
       <workItem from="1718899707935" duration="365000" />
-      <workItem from="1718900297246" duration="1882000" />
+      <workItem from="1718900297246" duration="2510000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -213,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718901685029</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <option name="closed" value="true" />
+      <created>1718902513519</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718902513519</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
