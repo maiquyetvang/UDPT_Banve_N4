@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/com/udpt_banve/RegistryServerApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/test-classes/com/udpt_banve/RegistryServerApplicationTests.class" beforeDir="false" />
-    </list>
+    <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +194,7 @@
       <workItem from="1718903941935" duration="1574000" />
       <workItem from="1718932323341" duration="1447000" />
       <workItem from="1718933799659" duration="101000" />
-      <workItem from="1718933981929" duration="1257000" />
+      <workItem from="1718933981929" duration="1655000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
