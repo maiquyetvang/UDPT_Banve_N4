@@ -1,6 +1,7 @@
 package com.udpt_banve.authservice.dto.request;
 
 import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Pattern;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
@@ -22,6 +23,9 @@ public class UserCreationRequest {
     String lastName;
     String email;
     LocalDate dob;
+
+//    @Pattern(regexp = "USER|EVENT_ADMIN", message = "INVALID_ROLE")
     String role;
+
 
 }

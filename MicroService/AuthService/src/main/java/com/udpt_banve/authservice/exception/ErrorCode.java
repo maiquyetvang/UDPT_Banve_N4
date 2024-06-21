@@ -10,7 +10,8 @@ public enum ErrorCode {
     INVALID_PASSWORD(1003, "Mật khẩu phải chứa ít nhất 6 ký tự"),
     INVALID_KEY(1004, "Invalid message key"),
     USER_NOT_FOUND(1005,"Người dùng không tồn tại"),
-    UNAUTHENTICATED(1005,"Xác thực không thành công")
+    UNAUTHENTICATED(1005,"Xác thực không thành công"),
+    INVALID_ROLE(1005,"Role không tồn tại")
     ;
     ErrorCode(int code, String message) {
         this.code = code;
