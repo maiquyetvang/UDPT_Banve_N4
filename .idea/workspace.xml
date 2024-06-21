@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/config/ApplicationInitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/IntrospectRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/response/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/response/IntrospectResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/response/UserCreationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/response/UserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/exception/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/exception/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/service/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/com/udpt_banve/RegistryServerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/test-classes/com/udpt_banve/RegistryServerApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.AuthService [clean].executor": "Run",
     "Maven.AuthenticationService [clean].executor": "Run",
     "Maven.AuthenticationService [install].executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
@@ -101,7 +81,9 @@
     "Spring Boot.Api Gateway.executor": "Run",
     "Spring Boot.ApiGateway.executor": "Run",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.Auth.executor": "Run",
     "Spring Boot.AuthService.executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
     "Spring Boot.Authentication Service.executor": "Run",
     "Spring Boot.AuthenticationService.executor": "Run",
     "Spring Boot.AuthenticationServiceApplication.executor": "Run",
@@ -148,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Authentication Service">
+  <component name="RunManager" selected="Spring Boot.Auth">
     <configuration name="Api Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -158,7 +140,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="Auth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="AuthService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.authservice.AuthServiceApplication" />
       <method v="2">
@@ -175,7 +159,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.Auth" />
       <item itemvalue="Spring Boot.Api Gateway" />
       <item itemvalue="Spring Boot.Authentication Service" />
     </list>
@@ -215,7 +199,7 @@
       <workItem from="1718903941935" duration="1574000" />
       <workItem from="1718932323341" duration="1447000" />
       <workItem from="1718933799659" duration="101000" />
-      <workItem from="1718933981929" duration="760000" />
+      <workItem from="1718933981929" duration="1257000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
