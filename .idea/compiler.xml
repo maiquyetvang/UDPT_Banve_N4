@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="AuthService" />
+        <module name="ProfileService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AuthService" options="-parameters" />
       <module name="AuthenticationService" options="-parameters" />
+      <module name="ProfileService" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
     </option>
   </component>

@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/AuthService/pom.xml" />
         <option value="$PROJECT_DIR$/MicroService/AuthService/pom.xml" />
+        <option value="$PROJECT_DIR$/ProfileService/pom.xml" />
+        <option value="$PROJECT_DIR$/MicroService/ProfileService/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

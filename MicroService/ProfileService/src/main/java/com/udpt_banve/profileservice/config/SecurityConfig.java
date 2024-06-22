@@ -1,7 +1,7 @@
-package com.udpt_banve.authservice.config;
+package com.udpt_banve.profileservice.config;
 
 
-import com.udpt_banve.authservice.service.AuthenticationService;
+import com.udpt_banve.profileservice.ProfileServiceApplication;
 import lombok.experimental.NonFinal;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -28,9 +28,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class SecurityConfig {
 
     private final String[] PUBLIC_ENDPOINT = {
-            "/auth/users/register",
-            "/auth/login",
-            "/auth/introspect"
+
     };
 
     @NonFinal
@@ -69,11 +67,6 @@ public class SecurityConfig {
         return NimbusJwtDecoder.withSecretKey(secretKeySpec)
                 .macAlgorithm(MacAlgorithm.HS512)
                 .build();
-    }
-
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(10);
     }
 
 }

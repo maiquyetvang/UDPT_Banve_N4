@@ -11,7 +11,8 @@ public enum ErrorCode {
     INVALID_KEY(1004, "Invalid message key"),
     USER_NOT_FOUND(1005,"Người dùng không tồn tại"),
     UNAUTHENTICATED(1005,"Xác thực không thành công"),
-    INVALID_ROLE(1005,"Role không tồn tại")
+    INVALID_ROLE(1005,"Role không tồn tại"),
+    UNAUTHORIZED(1006,"Xác thực không thành công"),
     ;
     ErrorCode(int code, String message) {
         this.code = code;

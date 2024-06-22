@@ -1,5 +1,6 @@
 package com.udpt_banve.authservice.service;
 
+import com.udpt_banve.authservice.dto.request.ChangePasswordRequest;
 import com.udpt_banve.authservice.dto.request.UserCreationRequest;
 import com.udpt_banve.authservice.dto.response.UserCreationResponse;
 import com.udpt_banve.authservice.dto.response.UserResponse;
@@ -30,8 +31,26 @@ public class UserService {
     UserRepository userRepository;
     UserMapper userMapper;
     AuthenticationService authenticationService;
+
     public UserCreationResponse createUser(UserCreationRequest request) {
         User user = userMapper.toUser(request);
+        if (userRepository.existsByUsername(user.getUsername())) {
+            throw new AppException(ErrorCode.USER_EXISTED);
+        }
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+
+        user.setRole(Role.USER.name());
+        userRepository.save(user);
+        UserCreationResponse response = userMapper.toUserCreationResponse(user);
+        var token = authenticationService.generateToken(user);
+        response.setToken(token);
+        return response;
+    }
+
+
+    public String changePassword(ChangePasswordRequest request) {
+        String password = request.getPassword();
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new AppException(ErrorCode.USER_EXISTED);
         }

@@ -24,7 +24,7 @@ public class UserCreationRequest {
     String email;
     LocalDate dob;
 
-//    @Pattern(regexp = "USER|EVENT_ADMIN", message = "INVALID_ROLE")
+//    @Pattern(regexp = "USER|EVENT_ADMIN|", message = "INVALID_ROLE")
     String role;
 
 
