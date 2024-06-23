@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
 import java.util.Map;
 
 @RestController
@@ -26,7 +25,7 @@ public class Controller {
         log.info((String) userInfo.get("given_name"));
         log.info((String) userInfo.get("family_name"));
         log.info((String) userInfo.get("picture"));
-        log.info((String) userInfo.get("exp").toString()); // Lưu expiration time vào entity
+        log.info(userInfo.get("exp").toString()); // Lưu expiration time vào entity
 
         return userInfo;
     }

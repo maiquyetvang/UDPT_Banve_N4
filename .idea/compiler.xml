@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="GoogleLogin" />
         <module name="ProfileService" />
-        <module name="demo1" />
         <module name="AuthService" />
       </profile>
     </annotationProcessing>
@@ -24,10 +24,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AuthService" options="-parameters" />
       <module name="AuthenticationService" options="-parameters" />
+      <module name="GoogleLogin" options="-parameters" />
       <module name="ProfileService" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="demo" options="-parameters" />
-      <module name="demo1" options="-parameters" />
     </option>
   </component>
 </project>
