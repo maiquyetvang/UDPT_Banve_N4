@@ -14,10 +14,13 @@
         <option value="$PROJECT_DIR$/MicroService/AuthService/pom.xml" />
         <option value="$PROJECT_DIR$/ProfileService/pom.xml" />
         <option value="$PROJECT_DIR$/MicroService/ProfileService/pom.xml" />
+        <option value="$PROJECT_DIR$/MicroService/AuthService/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/MicroService/AuthService/demo/pom.xml" />
         <option value="$PROJECT_DIR$/MicroService/RegistryServer/pom.xml" />
       </set>
     </option>

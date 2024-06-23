@@ -7,12 +7,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
+
 @Getter
 @Setter
 @Document(collection = "user_profiles")
 public class UserProfile {
     @Id
-    private String userId;
+    private String username;
     private String firstName;
     private String lastName;
     private String gender;

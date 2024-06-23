@@ -1,18 +1,29 @@
 package com.udpt_banve.profileservice.service;
 
+import com.udpt_banve.profileservice.dto.request.UpdateUserProfileRequest;
+import com.udpt_banve.profileservice.mapper.UserProfileMapper;
 import com.udpt_banve.profileservice.model.UserProfile;
 import com.udpt_banve.profileservice.repository.UserProfileRepository;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE,makeFinal = true)
+@Slf4j
 public class UserProfileService {
 
-    @Autowired
-    private UserProfileRepository userProfileRepository;
+    UserProfileRepository userProfileRepository;
+//    UserProfileMapper userProfileMapper;
 
     @PreAuthorize("hasRole('ADMIN')")
     public List<UserProfile> getAllProfiles() {
@@ -24,18 +35,33 @@ public class UserProfileService {
     }
 
     public UserProfile createProfile(UserProfile userProfile) {
+        var context = SecurityContextHolder.getContext();
+        String username = context.getAuthentication().getName();
+        userProfile.setUsername(username);
         return userProfileRepository.save(userProfile);
     }
 
-    public UserProfile updateProfile(String userId, UserProfile userProfile) {
-        if (userProfileRepository.existsById(userId)) {
-            userProfile.setUserId(userId);
-            return userProfileRepository.save(userProfile);
-        }
-        return null;
-    }
+//    public UserProfile updateProfile(UpdateUserProfileRequest request) {
+//        var context = SecurityContextHolder.getContext();
+//        String username = context.getAuthentication().getName();
+//        if (userProfileRepository.existsByUsername(username))
+//            return null;
+//
+////        return userMapper.toUserResponse(userRepository.findByUsername(username)
+////                .orElseThrow(()->new AppException(ErrorCode.USER_NOT_FOUND)));
+//        UserProfile userProfile = userProfileMapper.toUserProfile(request);
+//
+//        log.info("username: " + username);
+//        if (userProfileRepository.existsByUsername(username)) {
+//            userProfile.setUsername(username);
+//            return userProfileRepository.save(userProfile);
+//        }
+//        return null;
+//    }
 
-    public void deleteProfile(String userId) {
+    @PreAuthorize("hasRole('ADMIN')")
+    public String deleteProfile(String userId) {
         userProfileRepository.deleteById(userId);
+        return "Profile deleted";
     }
 }

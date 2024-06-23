@@ -3,6 +3,7 @@ package com.udpt_banve.authservice.controller;
 
 import com.udpt_banve.authservice.dto.request.ApiResponse;
 import com.udpt_banve.authservice.dto.request.ChangePasswordRequest;
+import com.udpt_banve.authservice.dto.request.EventAdminCreationRequest;
 import com.udpt_banve.authservice.dto.request.UserCreationRequest;
 import com.udpt_banve.authservice.dto.response.UserCreationResponse;
 import com.udpt_banve.authservice.dto.response.UserResponse;
@@ -29,15 +30,21 @@ public class UserController {
                 .result(userService.createUser(request))
                 .build();
     }
+    @PostMapping("/register_eventadmin")
+    ApiResponse<UserCreationResponse> createEventAdmin(@RequestBody @Valid EventAdminCreationRequest request) {
+        return ApiResponse.<UserCreationResponse>builder()
+                .result(userService.createEventAdmin(request))
+                .build();
+    }
     @GetMapping
     List<UserResponse> getAllUsers() {
         var authentication = SecurityContextHolder.getContext().getAuthentication();
         return userService.getAllUsers();
     }
-    @PostMapping
+    @PostMapping("/changepassword")
     ApiResponse<String> changePassword(@RequestBody @Valid ChangePasswordRequest request) {
         return ApiResponse.<String>builder()
-                .result()
+                .result(userService.changePassword(request))
                 .build();
     }
 

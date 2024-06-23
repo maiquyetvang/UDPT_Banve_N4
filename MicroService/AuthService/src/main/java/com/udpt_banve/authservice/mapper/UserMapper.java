@@ -1,5 +1,6 @@
 package com.udpt_banve.authservice.mapper;
 
+import com.udpt_banve.authservice.dto.request.EventAdminCreationRequest;
 import com.udpt_banve.authservice.dto.request.UserCreationRequest;
 import com.udpt_banve.authservice.dto.response.UserCreationResponse;
 import com.udpt_banve.authservice.dto.response.UserResponse;
@@ -10,6 +11,7 @@ import org.mapstruct.Mapper;
 public interface UserMapper {
 
     User toUser(UserCreationRequest user);
+    User toUser(EventAdminCreationRequest user);
     UserResponse toUserResponse(User user);
     UserCreationResponse toUserCreationResponse(User user);
 }
