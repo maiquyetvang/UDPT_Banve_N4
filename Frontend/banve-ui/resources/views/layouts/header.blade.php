@@ -1,3 +1,5 @@
+<!-- resources/views/layouts/header.blade.php -->
+
 <header class="bg-light py-2">
     <div class="container">
         <div class="row align-items-center">
@@ -40,8 +42,15 @@
                             <li class="nav-item {{ request()->routeIs('home.index') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('home.index') }}">Home</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('event.index') ? 'active' : '' }}">
-                                <a class="nav-link" href="#">Event</a>
+                            <li class="nav-item dropdown {{ request()->routeIs('event.index') ? 'active' : '' }}">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Event
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('event.find') }}">Find Event</a>
+                                    <a class="dropdown-item" href="{{ route('event.hot') }}">Hot Event</a>
+                                    <a class="dropdown-item" href="{{ route('event.hot') }}">Create Event</a>
+                                </div>
                             </li>
                             <li class="nav-item {{ request()->routeIs('help.index') ? 'active' : '' }}">
                                 <a class="nav-link" href="#">Help</a>
@@ -49,14 +58,31 @@
                         </ul>
                     </div>
                 </nav>
-                <!-- Auth links outside navbar -->
                 <div class="auth-links ml-3">
                     @if(Session::has('user'))
-                        <span class="nav-link">Xin chào, {{ Session::get('user.username') }}</span>
-                        <a href="{{ route('logout') }}" class="nav-link">Log Out</a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Xin chào, {{ Session::get('user.username') }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="{{ route('profile.show') }}">
+                                    <i class="fas fa-user mr-2"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-ticket-alt mr-2"></i> My Tickets
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-key mr-2"></i> Change Password
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <i class="fas fa-sign-out-alt mr-2"></i> Log Out
+                                </a>
+                            </div>
+                        </div>
                     @else
                         <a href="{{ route('login') }}" class="nav-link">Log In</a>
-                        <a href="#" class="nav-link">Sign Up</a>
+                        <a href="{{ route('choose.registration') }}" class="nav-link">Sign Up</a>
                     @endif
                 </div>
             </div>

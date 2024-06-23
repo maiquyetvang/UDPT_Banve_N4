@@ -72,6 +72,74 @@ body {
     padding: 0.5rem 1rem;
     color: #000;
 }
+/* Nav-bar và nav-item */
+
+.navbar-nav .nav-item .nav-link {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(10px);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+    background-color: #686f78;
+    color: #fff;
+}
+
+/* Dropdown styling for user menu */
+.auth-links .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(10px);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.auth-links .dropdown:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.auth-links .dropdown-item {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-links .dropdown-item:hover {
+    background-color: #686f78;
+    color: #fff;
+}
+
+/* Styling for other components remains unchanged */
+
 
 
 /* Style cho phần tìm kiếm */
@@ -109,13 +177,21 @@ body {
     margin-left: -15px; /* Khoảng cách giữa các liên kết */
 }
 
+
+
 .custom-content {
     min-height: 1000px; /* Độ cao tối thiểu là 500px */
-    background-color: #ffffcc; /* Màu nền là màu vàng */
+    background-color: #ffffcc; 
+    /* Màu nền là màu vàng */
     padding: 20px; /* Phần padding để tạo khoảng cách với các thành phần khác */
 }
 
 
+
+/* ----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- */
 .footer-wrapper {
     background-color: #16222A;
     color: white;
@@ -134,3 +210,5 @@ body {
 .footer .text-reset:hover {
     color: #cccccc; /* Màu khi hover */
 }
+/* Existing CSS for phone-email, social-icons, logo, form-inline, navbar-nav, etc. */
+

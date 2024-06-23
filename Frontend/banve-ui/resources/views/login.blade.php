@@ -48,6 +48,14 @@
             background-color: #f8f9fa;
         }
 
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
         #error-message {
             color: red;
             margin-top: .25rem;
@@ -84,11 +92,13 @@
                                     <input type="password" id="password" name="password" class="form-control form-control-lg"
                                         required>
                                     <label class="form-label" for="password">Password</label>
+                                    <i class="fas fa-eye password-toggle" id="toggle-password"></i>
                                 </div>
     
-                                <div class="form-check d-flex justify-content-start mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="remember" name="remember">
-                                    <label class="form-check-label" for="remember"> Remember password </label>
+                               
+    
+                                <div class="mb-4">
+                                    <span>Don't have an account? <a href="{{ route('choose.registration') }}">Sign Up</a></span>
                                 </div>
     
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
@@ -114,14 +124,17 @@
 
     <!-- Link to MDB JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.8.0/mdb.min.js"></script>
-    <!-- Custom JavaScript for Form Validation -->
+    <!-- Custom JavaScript for Form Validation and Toggle Password Visibility -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('login-form');
             const emailInput = document.getElementById('email');
             const passwordInput = document.getElementById('password');
+            const rePasswordInput = document.getElementById('repassword');
             const errorMessage = document.getElementById('error-message');
             const sessionError = document.getElementById('session-error');
+            const togglePassword = document.getElementById('toggle-password');
+            
 
             form.addEventListener('submit', function(event) {
                 // Kiểm tra không để trống
@@ -145,6 +158,15 @@
                 // Nếu validate thành công, có thể submit form
             });
 
+            // Toggle password visibility
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+
+          
             // Nếu có lỗi từ session, ẩn nó sau 3 giây
             if (sessionError) {
                 setTimeout(() => sessionError.style.display = 'none', 3000);

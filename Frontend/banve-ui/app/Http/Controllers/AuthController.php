@@ -54,4 +54,8 @@ class AuthController extends Controller
         Session::forget(['jwt_token', 'user']);
         return redirect()->route('home.index');
     }
+    public function showRegistrationChoice()
+    {
+        return view('choose_registration');
+    }
 }
