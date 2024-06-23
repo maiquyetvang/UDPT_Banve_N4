@@ -2,6 +2,8 @@ package com.udpt_banve.authservice.controller;
 
 
 import com.udpt_banve.authservice.dto.request.ApiResponse;
+import com.udpt_banve.authservice.dto.request.ChangePasswordRequest;
+import com.udpt_banve.authservice.dto.request.EventAdminCreationRequest;
 import com.udpt_banve.authservice.dto.request.UserCreationRequest;
 import com.udpt_banve.authservice.dto.response.UserCreationResponse;
 import com.udpt_banve.authservice.dto.response.UserResponse;
@@ -22,13 +24,16 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping
+    @PostMapping("/register")
     ApiResponse<UserCreationResponse> createUser(@RequestBody @Valid UserCreationRequest request) {
-//        ApiResponse<UserResponse> apiResponse = new ApiResponse<>();
-//        apiResponse.setResult(userService.createUser(request));
-//        return apiResponse;
         return ApiResponse.<UserCreationResponse>builder()
                 .result(userService.createUser(request))
+                .build();
+    }
+    @PostMapping("/register_eventadmin")
+    ApiResponse<UserCreationResponse> createEventAdmin(@RequestBody @Valid EventAdminCreationRequest request) {
+        return ApiResponse.<UserCreationResponse>builder()
+                .result(userService.createEventAdmin(request))
                 .build();
     }
     @GetMapping
@@ -36,6 +41,13 @@ public class UserController {
         var authentication = SecurityContextHolder.getContext().getAuthentication();
         return userService.getAllUsers();
     }
+    @PostMapping("/changepassword")
+    ApiResponse<String> changePassword(@RequestBody @Valid ChangePasswordRequest request) {
+        return ApiResponse.<String>builder()
+                .result(userService.changePassword(request))
+                .build();
+    }
+
 
     @GetMapping("/{username}")
     ApiResponse<UserResponse> getUserByUsername(@PathVariable String username) {
