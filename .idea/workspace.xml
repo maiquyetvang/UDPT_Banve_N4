@@ -7,29 +7,7 @@
     <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="chạy ổn các service APIGateway, AuthenticationService, ProfileService">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/Demo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Demo1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/GoogleProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/GoogleProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/test/java/com/example/demo/Demo1ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/test/java/com/example/demo/Demo1ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17__Changes_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +99,7 @@
     "Spring Boot.ProfileServiceApplication.executor": "Run",
     "Spring Boot.RegistryServer.executor": "Run",
     "Spring Boot.RegistryServerApplication.executor": "Run",
-    "git-widget-placeholder": "maiquyetvang",
+    "git-widget-placeholder": "feature/vohuuanhtuan",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/config",

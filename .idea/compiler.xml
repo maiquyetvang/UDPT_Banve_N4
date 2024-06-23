@@ -18,6 +18,7 @@
       <module name="demo" target="17" />
       <module name="demo.main" target="17" />
       <module name="demo.test" target="17" />
+      <module name="PaymentSevice" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
