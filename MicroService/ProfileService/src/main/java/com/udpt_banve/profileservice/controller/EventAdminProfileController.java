@@ -1,6 +1,8 @@
 package com.udpt_banve.profileservice.controller;
 
+import com.udpt_banve.profileservice.dto.response.ApiResponse;
 import com.udpt_banve.profileservice.model.EventAdminProfile;
+import com.udpt_banve.profileservice.model.UserProfile;
 import com.udpt_banve.profileservice.service.EventAdminProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,11 +33,10 @@ public class EventAdminProfileController {
 //    }
 
     @PostMapping
-    public EventAdminProfile createProfile(@RequestBody EventAdminProfile eventAdminProfile) {
-        var context = SecurityContextHolder.getContext();
-        String username = context.getAuthentication().getName();
-        eventAdminProfile.setUsername(username);
-        return eventAdminProfileService.createProfile(eventAdminProfile);
+    public ApiResponse<EventAdminProfile> createProfile(@RequestBody EventAdminProfile profile) {
+        return ApiResponse.<EventAdminProfile>builder()
+                .result(eventAdminProfileService.createProfile(profile))
+                .build();
     }
 //
 //    @PutMapping("/{userId}")

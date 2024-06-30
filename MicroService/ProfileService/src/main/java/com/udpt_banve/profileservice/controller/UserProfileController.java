@@ -1,6 +1,5 @@
 package com.udpt_banve.profileservice.controller;
 
-import com.udpt_banve.profileservice.dto.request.UpdateUserProfileRequest;
 import com.udpt_banve.profileservice.dto.response.ApiResponse;
 import com.udpt_banve.profileservice.model.UserProfile;
 import com.udpt_banve.profileservice.service.UserProfileService;
@@ -35,6 +34,13 @@ public class UserProfileController {
         return ResponseEntity.ok(userProfile);
     }
 
+
+    @GetMapping("/my")
+    public ApiResponse<UserProfile> myProfile() {
+        return ApiResponse.<UserProfile>builder()
+                .result(userProfileService.getMyProfile())
+                .build();
+    }
     @PostMapping
     public ApiResponse<UserProfile> createProfile(@RequestBody UserProfile userProfile) {
         return ApiResponse.<UserProfile>builder()
@@ -43,14 +49,12 @@ public class UserProfileController {
     }
 
 
-//    // Chưa xong
+//    // Chưa ne
 //    @PutMapping
-//    public ResponseEntity<UserProfile> updateProfile(@RequestBody UpdateUserProfileRequest userProfile) {
-//        UserProfile updatedProfile = userProfileService.updateProfile(userProfile);
-//        if (updatedProfile == null) {
-//            return ResponseEntity.notFound().build();
-//        }
-//        return ResponseEntity.ok(updatedProfile);
+//    public ApiResponse<UserProfile> updateProfile(@RequestBody UserProfile request) {
+//        return ApiResponse.<UserProfile>builder()
+//                .result(userProfileService.updateProfile(request))
+//                .build();
 //    }
 
     @DeleteMapping("/{userId}")

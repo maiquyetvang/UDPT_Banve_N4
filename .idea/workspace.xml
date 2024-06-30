@@ -5,31 +5,215 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="chạy ổn các service APIGateway, AuthenticationService, ProfileService">
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/.styleci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/frontend/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/frontend/css/login-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/frontend/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/frontend/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/resources/views/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/banve-ui/webpack.mix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/config/AuthenticationRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/CustomerProfileCreationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/dto/request/EventAdminProfileCreationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/repository/httpclient/ProfileClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/main/java/api/EventManagamentApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/main/java/api/controller/EventController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/main/java/api/model/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/main/java/api/repository/Eventrepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/main/java/api/subcriber/Subcriber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/bin/src/test/java/api/EventManagamentApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/java/api/EventManagamentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/java/api/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/java/api/model/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/java/api/repository/Eventrepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/java/api/subcriber/Subcriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/src/test/java/api/EventManagamentApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/target/classes/api/EventManagamentApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/target/classes/api/controller/EventController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/target/classes/api/model/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/target/classes/api/repository/Eventrepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/EventManagament/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/java/com/example/demo/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/java/com/example/demo/Demo1Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/java/com/example/demo/GoogleProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/java/com/example/demo/GoogleProfileRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/java/com/example/demo/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/GoogleLogin/src/test/java/com/example/demo/Demo1ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/java/api/PaymentSeviceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/java/api/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/java/api/controller/PaymentQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/java/api/controller/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/java/config/VNPayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/PaymentSevice/src/test/java/api/PaymentSeviceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/ProfileServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/test/java/com/udpt_banve/profileservice/ProfileServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/java/api/TicketServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/java/api/controller/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/java/api/model/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/java/api/publisher/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/java/api/repository/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroService/TicketService/src/test/java/api/TicketServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/Demo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Demo1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/GoogleProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/GoogleProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1/src/test/java/com/example/demo/Demo1ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleLogin/src/test/java/com/example/demo/Demo1ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/Demo1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/GoogleProfileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/java/com/example/demo/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoogleLogin/src/test/java/com/example/demo/Demo1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/AuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/AuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/java/com/udpt_banve/authservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/AuthService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/AuthService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/controller/EventAdminProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/controller/EventAdminProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/controller/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/controller/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/request/UpdateEventAdminProfileRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/request/EventAdminProfileRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/request/UpdateUserProfileRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/request/UserProfileRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/mapper/UserProfileMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/mapper/UserProfileMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/model/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/model/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/repository/EventAdminProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/repository/EventAdminProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/repository/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/repository/UserProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/service/EventAdminProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/service/EventAdminProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/service/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/udpt_banve/apigateway/configuration/WebClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,62 +272,68 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Maven.AuthService [clean].executor": "Run",
-    "Maven.AuthenticationService [clean].executor": "Run",
-    "Maven.AuthenticationService [install].executor": "Run",
-    "Maven.ProfileService [clean].executor": "Run",
-    "Maven.ProfileService [compile].executor": "Run",
-    "Maven.ProfileService [install].executor": "Run",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Api Gateway.executor": "Run",
-    "Spring Boot.ApiGateway.executor": "Run",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.Auth.executor": "Run",
-    "Spring Boot.AuthService.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.Authentication Service.executor": "Run",
-    "Spring Boot.AuthenticationService.executor": "Run",
-    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
-    "Spring Boot.Demo1Application.executor": "Run",
-    "Spring Boot.ProfileServiceApplication.executor": "Run",
-    "Spring Boot.RegistryServer.executor": "Run",
-    "Spring Boot.RegistryServerApplication.executor": "Run",
-    "git-widget-placeholder": "maiquyetvang",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Maven.AuthService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AuthenticationService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AuthenticationService [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.EventManagament [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PaymentSevice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProfileService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProfileService [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProfileService [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TicketService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Api Gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiGateway.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Auth.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthService.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Authentication Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationService.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Demo1Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EventManagamentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentSeviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProfileServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RegistryServer.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RegistryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TicketServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/UDPT_Banve_N4/MicroService/EventManagament&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "azure"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;azure&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\ProfileService\src\main\java\com\udpt_banve\profileservice\config" />
@@ -153,9 +343,9 @@
       <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\AuthService\src\main\java\com\udpt_banve\authservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.udpt_banve.authservice.dto.request" />
       <recent name="com.udpt_banve.profileservice.dto.response" />
       <recent name="com.udpt_banve.profileservice.dto.request" />
-      <recent name="com.udpt_banve.authservice.dto.request" />
       <recent name="com.udpt_banve.profileservice.config" />
       <recent name="com.udpt_banve.profileservice.service" />
     </key>
@@ -169,7 +359,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProfileServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
     <configuration name="Api Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -179,7 +369,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Authentication Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="AuthService" />
@@ -188,15 +378,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoogleLogin" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="GoogleLogin" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Demo1Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="EventManagamentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="EventManagament" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.EventManagamentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentSeviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="PaymentSevice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.PaymentSeviceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,17 +401,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicketServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TicketService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.TicketServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.Api Gateway" />
-      <item itemvalue="Spring Boot.Authentication Service" />
+      <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
       <item itemvalue="Spring Boot.ProfileServiceApplication" />
-      <item itemvalue="Spring Boot.GoogleLogin" />
+      <item itemvalue="Spring Boot.EventManagamentApplication" />
+      <item itemvalue="Spring Boot.PaymentSeviceApplication" />
+      <item itemvalue="Spring Boot.TicketServiceApplication" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.GoogleLogin" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -264,6 +461,14 @@
       <workItem from="1719032116620" duration="11270000" />
       <workItem from="1719098893950" duration="24506000" />
       <workItem from="1719136233189" duration="765000" />
+      <workItem from="1719152917069" duration="3900000" />
+      <workItem from="1719191237117" duration="1521000" />
+      <workItem from="1719192973700" duration="4839000" />
+      <workItem from="1719199262035" duration="3234000" />
+      <workItem from="1719494755533" duration="2655000" />
+      <workItem from="1719545289864" duration="1378000" />
+      <workItem from="1719623337830" duration="597000" />
+      <workItem from="1719707287177" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

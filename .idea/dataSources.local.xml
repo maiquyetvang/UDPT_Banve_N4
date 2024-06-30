@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-241.17011.79">
+    <data-source name="udpt_auth_service@udptbanve.mysql.database.azure.com" uuid="70bb6bb3-46c6-4813-a095-f608849d18e0">
+      <database-info product="MySQL" version="8.0.36-cluster" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.36" exact-driver-version="8.2">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>banve</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="udpt_auth_service" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="ticket@localhost" uuid="90160133-4ca1-428e-90ca-f3bb3fa773b4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="profileservice@localhost" uuid="ac153056-f6e2-4d5d-adae-1e95d0337ad1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="banve@localhost" uuid="8e37f0cb-fe4c-49d7-b9cb-65471ae83ff4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

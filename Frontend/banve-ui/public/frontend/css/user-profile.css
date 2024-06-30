@@ -1,0 +1,115 @@
+.form-outline {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-outline input.form-control, .form-outline select.form-control {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+}
+
+.form-outline input.form-control:focus, .form-outline select.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+}
+
+.form-outline .form-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    transition: .2s ease-out;
+    font-size: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.form-outline .form-control:focus ~ .form-label, 
+.form-outline .form-control:not(:placeholder-shown) ~ .form-label, 
+.form-outline select.form-control:focus ~ .form-label, 
+.form-outline select.form-control:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    transform: translateY(-100%);
+    left: .75rem;
+    font-size: .75rem;
+    background-color: #f8f9fa;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    margin-top: .25rem;
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-column {
+    flex: 0 0 48%;
+}
+
+.btn-back {
+    background-color: #d3d3d3;
+    color: #000;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-back:hover {
+    background-color: #a9a9a9;
+}
+
+.card {
+    width: 100%; /* Make card take full width of parent */
+    max-width: 800px; /* Set a maximum width for the card */
+    margin: auto; /* Center the card */
+}
+
+.section {
+    background-color: #508bfc;
+    height: 100vh;
+}
+
+.container {
+    height: calc(100vh - 20px); /* Ensure full height minus some padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body {
+    padding: 2rem; /* Adjust padding as needed */
+}
+.input-group {
+    position: relative; /* Để có thể căn chỉnh icon */
+}
+
+.edit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem; /* Có thể điều chỉnh khoảng cách nếu cần */
+    cursor: pointer;
+    color: #6c757d; /* Màu biểu tượng */
+    transition: color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.edit-icon:hover {
+    color: #495057; /* Màu biểu tượng khi hover */
+}

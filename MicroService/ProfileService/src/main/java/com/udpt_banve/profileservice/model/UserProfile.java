@@ -13,13 +13,13 @@ import java.time.LocalDate;
 @Document(collection = "user_profiles")
 public class UserProfile {
     @Id
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String phoneNumber;
-    private LocalDate dateOfBirth;
-    private String street;
-    private String district;
-    private String province;
+    String username;
+    String firstName;
+    String lastName;
+    String gender;
+    String phoneNumber;
+    LocalDate dateOfBirth;
+    String street;
+    String district;
+    String province;
 }

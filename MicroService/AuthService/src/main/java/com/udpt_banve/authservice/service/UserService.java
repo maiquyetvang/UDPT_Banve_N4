@@ -1,8 +1,6 @@
 package com.udpt_banve.authservice.service;
 
-import com.udpt_banve.authservice.dto.request.ChangePasswordRequest;
-import com.udpt_banve.authservice.dto.request.EventAdminCreationRequest;
-import com.udpt_banve.authservice.dto.request.UserCreationRequest;
+import com.udpt_banve.authservice.dto.request.*;
 import com.udpt_banve.authservice.dto.response.UserCreationResponse;
 import com.udpt_banve.authservice.dto.response.UserResponse;
 import com.udpt_banve.authservice.entity.User;
@@ -11,6 +9,7 @@ import com.udpt_banve.authservice.exception.AppException;
 import com.udpt_banve.authservice.exception.ErrorCode;
 import com.udpt_banve.authservice.mapper.UserMapper;
 import com.udpt_banve.authservice.repository.UserRepository;
+import com.udpt_banve.authservice.repository.httpclient.ProfileClient;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -33,14 +32,13 @@ public class UserService {
     UserMapper userMapper;
     AuthenticationService authenticationService;
     PasswordEncoder passwordEncoder;
+    ProfileClient profileClient;
 
     public UserCreationResponse createUser(UserCreationRequest request) {
         User user = userMapper.toUser(request);
-        if (userRepository.existsByUsername(user.getUsername())) {
+
+        if (userRepository.existsByUsername(user.getUsername()) || userRepository.existsByEmail(user.getEmail())) {
             throw new AppException(ErrorCode.USER_EXISTED);
-        }
-        if (userRepository.existsByEmail(user.getEmail())) {
-            throw new AppException(ErrorCode.EMAIL_EXISTED);
         }
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
@@ -55,7 +53,9 @@ public class UserService {
         response.setToken(token);
 
         //Create user profile in profile-service
-
+        CustomerProfileCreationRequest profile = userMapper.toUserProfileCreationRequest(request);
+        var profileResponse = profileClient.createCustomerProfile(profile);
+        log.info("Created profile: {}", profileResponse);
         return response;
     }
 
@@ -63,6 +63,9 @@ public class UserService {
         User user = userMapper.toUser(request);
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new AppException(ErrorCode.USER_EXISTED);
+        }
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new AppException(ErrorCode.EMAIL_EXISTED);
         }
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
@@ -72,12 +75,14 @@ public class UserService {
         userRepository.save(user);
 
         // Create response
-        UserCreationResponse response = userMapper.toUserCreationResponse(user);
+        UserCreationResponse  response = userMapper.toUserCreationResponse(user);
         var token = authenticationService.generateToken(user);
         response.setToken(token);
+        EventAdminProfileCreationRequest profile = userMapper.toUserProfileCreationRequest(request);
 
         //Create user profile in profile-service
-
+        var profileResponse = profileClient.createEventProfile(profile);
+        log.info("Created profile: {}", profileResponse.toString());
         return response;
     }
 

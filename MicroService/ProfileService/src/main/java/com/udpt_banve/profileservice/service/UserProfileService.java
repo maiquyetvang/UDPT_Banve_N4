@@ -1,14 +1,11 @@
 package com.udpt_banve.profileservice.service;
 
-import com.udpt_banve.profileservice.dto.request.UpdateUserProfileRequest;
-import com.udpt_banve.profileservice.mapper.UserProfileMapper;
 import com.udpt_banve.profileservice.model.UserProfile;
 import com.udpt_banve.profileservice.repository.UserProfileRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -41,22 +38,32 @@ public class UserProfileService {
         return userProfileRepository.save(userProfile);
     }
 
-//    public UserProfile updateProfile(UpdateUserProfileRequest request) {
+
+    public UserProfile getMyProfile() {
+        var context = SecurityContextHolder.getContext();
+        String username = context.getAuthentication().getName();
+
+        log.info("username: {}",username);
+        UserProfile userProfile = userProfileRepository.findByUsername(username);
+        if (userProfile == null) {
+            throw  new RuntimeException("ErrorCode.USER_NOT_FOUND");
+        }
+        return userProfileRepository.save(userProfile);
+    }
+
+//    public UserProfile updateProfile(UserProfile request) {
+//        // Kiểm tra xem người dùng có tồn tại không
 //        var context = SecurityContextHolder.getContext();
 //        String username = context.getAuthentication().getName();
-//        if (userProfileRepository.existsByUsername(username))
-//            return null;
+////        log.info("username: " + username);
+////
+////        if (userProfileRepository.existsByUsername(username))
+////            throw  new RuntimeException("ErrorCode.USER_NOT_FOUND");
 //
-////        return userMapper.toUserResponse(userRepository.findByUsername(username)
-////                .orElseThrow(()->new AppException(ErrorCode.USER_NOT_FOUND)));
-//        UserProfile userProfile = userProfileMapper.toUserProfile(request);
 //
-//        log.info("username: " + username);
-//        if (userProfileRepository.existsByUsername(username)) {
-//            userProfile.setUsername(username);
-//            return userProfileRepository.save(userProfile);
-//        }
-//        return null;
+//        // Cập nhật thông tin profile
+//        request.setUsername(username);
+//        return userProfileRepository.save(request);
 //    }
 
     @PreAuthorize("hasRole('ADMIN')")

@@ -1,8 +1,8 @@
 ### Personal Workspace
 
 #### GATEWAY - Auth Service
-**Version:** CURRENT  
-**Language:** GATEWAY - Auth Service
+**Version:** 1.0
+**Language:** Spring Boot
 
 ---
 
@@ -13,17 +13,30 @@
 **Body:**
 ```json
 {
-    "username": "nguyenvana123m111",
-    "password": "password456",
-    "email": "nguyenvana123@example.commm",
-    "firstName": "Nguyen Van",
-    "lastName": "A",
-    "gender": "male",
-    "phoneNumber": "0123456789",
-    "dateOfBirth": "1990-01-01",
-    "street": "456 Example Street",
-    "district": "Example District",
-    "province": "Example Province"
+  "username": "nguyenvana",
+  "password": "password456",
+  "email": "nguyenvana@example.com",
+  "firstName": "Nguyen Van",
+  "lastName": "A",
+  "gender": "male",
+  "phoneNumber": "0123456789",
+  "dateOfBirth": "1990-01-01",
+  "street": "456 Example Street",
+  "district": "Example District",
+  "province": "Example Province"
+}
+```
+
+**Response:**
+```json
+{
+  "code": 1000,
+  "result": {
+    "username": "nguyenvana",
+    "email": "nguyenvana@example.com",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1ZHB0X2JhbnZlIiwic3ViIjoibmd1eWVudmFuYSIsImV4cCI6MTcxOTYzMjUyNywiaWF0IjoxNzE5NTQ2MTI3LCJzY29wZSI6IlVTRVIifQ.Ee-V2Ax5Na1_ovzT_5-t33ILqIPJ20140uCvRoy8mC2MOy8Gac0vtySq9tr9_8I-u6Ms3RbDDCKfE1jGFniWDA",
+    "role": "USER"
+  }
 }
 ```
 
