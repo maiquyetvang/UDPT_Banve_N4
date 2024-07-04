@@ -39,6 +39,22 @@
                 flex-direction: row;
             }
         }
+        .back-btn {
+            border: 2px solid #6c757d;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            background-color: #6c757d;
+            color: #fff;
+            width: 50%;
+            margin: 20px auto 0;
+        }
+        .back-btn:hover {
+            background-color: #5a6268;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -51,10 +67,11 @@
                 <div class="choice-box" onclick="location.href='{{ route('user.signup') }}'">
                     <h4>Khách hàng</h4>
                 </div>
-                <div class="choice-box" onclick="location.href='{{ route('admin.signup') }}'">
+                <div class="choice-box" onclick="location.href='{{ route('eadmin.signup') }}'">
                     <h4>Nhà tổ chức sự kiện</h4>
                 </div>
             </div>
+            <button class="back-btn" onclick="history.back()">Quay lại</button>
         </div>
     </div>
 

@@ -39,8 +39,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item {{ request()->routeIs('home.index') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('home.index') }}">Home</a>
+                            <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item dropdown {{ request()->routeIs('event.index') ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +49,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('event.find') }}">Find Event</a>
                                     <a class="dropdown-item" href="{{ route('event.hot') }}">Hot Event</a>
-                                    <a class="dropdown-item" href="{{ route('event.hot') }}">Create Event</a>
+                                    <a class="dropdown-item" href="{{ route('eadmin.signup') }}">Create Event</a>
                                 </div>
                             </li>
                             <li class="nav-item {{ request()->routeIs('help.index') ? 'active' : '' }}">
@@ -65,13 +65,13 @@
                                 Xin chào, {{ Session::get('user.username') }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{ route('profile.show') }}">
+                                <a class="dropdown-item" href="{{ route('profile') }}">
                                     <i class="fas fa-user mr-2"></i> Profile
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-ticket-alt mr-2"></i> My Tickets
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('user.changepass') }}">
                                     <i class="fas fa-key mr-2"></i> Change Password
                                 </a>
                                 <div class="dropdown-divider"></div>

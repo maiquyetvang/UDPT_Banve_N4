@@ -61,6 +61,11 @@
             margin-top: .25rem;
             display: none;
         }
+        /* Custom icon size for home */
+    .fa-home {
+        font-size: 1.5rem; /* Adjust the font-size as needed */
+        margin-right: 0.5rem; /* Optional: Add some spacing */
+    }
     </style>
 </head>
 <body>
@@ -70,6 +75,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
+                            <a href="{{ route('home.index') }}" class="btn btn-link text-dark"><i class="fas fa-home"></i></a>
 
                             <h3 class="mb-5">Sign in</h3>
 
@@ -83,9 +89,9 @@
                                 @csrf {{-- Laravel CSRF token --}}
                                 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                    <input type="username" id="username" name="username" class="form-control form-control-lg"
                                         required>
-                                    <label class="form-label" for="email">Email</label>
+                                    <label class="form-label" for="username">Username or email</label>
                                 </div>
     
                                 <div class="form-outline mb-4">
@@ -128,7 +134,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('login-form');
-            const emailInput = document.getElementById('email');
+            const usernameInput = document.getElementById('username');
             const passwordInput = document.getElementById('password');
             const rePasswordInput = document.getElementById('repassword');
             const errorMessage = document.getElementById('error-message');
@@ -138,17 +144,27 @@
 
             form.addEventListener('submit', function(event) {
                 // Kiểm tra không để trống
-                if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
-                    errorMessage.innerText = 'Email and Password cannot be empty';
+                if (usernameInput.value.trim() === '' || passwordInput.value.trim() === '') {
+                    errorMessage.innerText = 'username and Password cannot be empty';
                     errorMessage.style.display = 'block';
                     setTimeout(() => errorMessage.style.display = 'none', 3000);
                     event.preventDefault();
                     return;
                 }
 
-                // Kiểm tra định dạng email
-                if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailInput.value)) {
-                    errorMessage.innerText = 'Invalid email address';
+               
+                // Kiểm tra độ dài của username
+                if (usernameInput.value.length < 4) {
+                    errorMessage.innerText = 'Username must be at least 4 characters long';
+                    errorMessage.style.display = 'block';
+                    setTimeout(() => errorMessage.style.display = 'none', 3000);
+                    event.preventDefault();
+                    return;
+                }
+
+                // Kiểm tra độ dài của mật khẩu
+                if (passwordInput.value.length < 6) {
+                    errorMessage.innerText = 'Password must be at least 6 characters long';
                     errorMessage.style.display = 'block';
                     setTimeout(() => errorMessage.style.display = 'none', 3000);
                     event.preventDefault();
@@ -172,6 +188,7 @@
                 setTimeout(() => sessionError.style.display = 'none', 3000);
             }
         });
+
     </script>
 </body>
 </html>

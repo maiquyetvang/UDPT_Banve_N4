@@ -88,7 +88,7 @@
     </style>
 </head>
 <body>
-    <section class="vh-100" style="background-color: #508bfc;">
+    <section class="vh-120" style="background-color: #508bfc;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -96,8 +96,12 @@
                         <div class="card-body p-5 text-center">
 
                             <h3 class="mb-5">Sign Up</h3>
+                        @if(session('error'))
+                            <div class="alert alert-danger">{{ session('error') }}</div>
+                        @endif
 
-                            <form id="signup-form">
+                        <form id="signup-form" action="{{ route('signup.post') }}" method="POST">
+                            @csrf
                                 <div class="form-container">
                                     <div class="form-column">
                                         <div class="form-outline mb-4">
@@ -238,7 +242,16 @@
                         return;
                     }
                 }
+// Kiểm tra độ dài của username
+if (usernameInput.value.length < 4) {
+                    errorMessage.innerText = 'Username must be at least 4 characters long';
+                    errorMessage.style.display = 'block';
+                    setTimeout(() => errorMessage.style.display = 'none', 3000);
+                    event.preventDefault();
+                    return;
+                }
 
+              
                 // Kiểm tra định dạng email
                 if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailInput.value)) {
                     errorMessage.innerText = 'Invalid email address';
@@ -247,7 +260,14 @@
                     event.preventDefault();
                     return;
                 }
-
+ // Kiểm tra độ dài của mật khẩu
+ if (passwordInput.value.length < 6) {
+                    errorMessage.innerText = 'Password must be at least 6 characters long';
+                    errorMessage.style.display = 'block';
+                    setTimeout(() => errorMessage.style.display = 'none', 3000);
+                    event.preventDefault();
+                    return;
+                }
                 // Kiểm tra password và re-password trùng nhau
                 if (passwordInput.value !== rePasswordInput.value) {
                     errorMessage.innerText = 'Passwords do not match';
@@ -274,6 +294,10 @@
                 this.classList.toggle('fa-eye');
                 this.classList.toggle('fa-eye-slash');
             });
+             // Nếu có lỗi từ session, ẩn nó sau 3 giây
+             if (sessionError) {
+                setTimeout(() => sessionError.style.display = 'none', 3000);
+            }
         });
     </script>
 </body>
