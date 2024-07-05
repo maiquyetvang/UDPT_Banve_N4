@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 9000
 
 spring:
   application:
@@ -12,5 +12,11 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
+        - id: profile-service (any)
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/profiles/**
           filters:
             - StripPrefix=1

@@ -1,11 +1,14 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Session;
+
 use App\Models\User;
+
 class AuthController extends Controller
 {
     public function showLoginForm()
@@ -18,14 +21,17 @@ class AuthController extends Controller
         $client = new Client();
 
         try {
+
             $response = $client->post('http://localhost:9000/api/auth/login', [
                 'json' => [
                     'username' => $request->input('username'),
+
                     'password' => $request->input('password')
                 ]
             ]);
 
             $body = json_decode($response->getBody(), true);
+
 
             if (isset($body['result'])) {
                 $result = $body['result'];
@@ -48,6 +54,7 @@ class AuthController extends Controller
                 }
             } else {
                 return redirect()->back()->with('error', $body['message'] ?? 'Đăng nhập thất bại.');
+
             }
         } catch (\GuzzleHttp\Exception\ClientException $e) {
             // Lấy thông báo lỗi từ response của API
@@ -67,8 +74,10 @@ class AuthController extends Controller
         return redirect()->route('home.index');
     }
 
+
     public function showRegistrationChoice()
     {
         return view('choose_registration');
     }
+
 }

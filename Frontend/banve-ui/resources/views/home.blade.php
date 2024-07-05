@@ -1,8 +1,12 @@
+
+{{-- resources/views/home.blade.php --}}
+
 @extends('layouts.app')
 
 @section('title', 'Home')
 
 @section('content')
+
 <div class="main-banner">
     <div class="owl-carousel owl-banner">
         <div class="item item-1">
@@ -100,3 +104,4 @@
     });
 </script>
 @endpush
+

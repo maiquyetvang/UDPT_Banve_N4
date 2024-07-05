@@ -72,6 +72,7 @@ body {
     padding: 0.5rem 1rem;
     color: #000;
 }
+
 /* Nav-bar và nav-item */
 
 .navbar-nav .nav-item .nav-link {
@@ -179,12 +180,15 @@ body {
 
 
 
+
 .custom-content {
     min-height: 1000px; /* Độ cao tối thiểu là 500px */
     background-color: #fff; 
     /* Màu nền là màu vàng */
+
     padding: 20px; /* Phần padding để tạo khoảng cách với các thành phần khác */
 }
+
 
 
 
@@ -192,6 +196,7 @@ body {
 ----------------------------------------------------- 
 ----------------------------------------------------- 
 ----------------------------------------------------- */
+
 .footer-wrapper {
     background-color: #16222A;
     color: white;
@@ -210,6 +215,7 @@ body {
 .footer .text-reset:hover {
     color: #cccccc; /* Màu khi hover */
 }
+
 /* Existing CSS for phone-email, social-icons, logo, form-inline, navbar-nav, etc. */
 
 /* public/frontend/css/app.css */
@@ -399,3 +405,4 @@ body {
     margin-top: 10px; /* Khoảng cách phía trên đoạn văn */
     font-size: 1rem; /* Kích thước đoạn văn */
 }
+

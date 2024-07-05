@@ -1,3 +1,4 @@
+
 # Banve-UI
 
 Đây là dự án Laravel cho frontend của Bán vé sự kiện.
@@ -21,3 +22,4 @@ PHP >= 7.3, Composer, MySQL hoặc bất kỳ cơ sở dữ liệu nào được
    php artisan key:generate
 5. **Chạy server: Chạy lệnh sau để khởi động server Laravel**:
    php artisan serve
+
