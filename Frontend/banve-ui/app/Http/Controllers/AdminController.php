@@ -8,10 +8,38 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
-    //
+   
+    // Get dashboard action
     public function index()
     {
-        return view('admins.home');
+        $client = new Client();
+        $token = Session::get('jwt_token');
+
+        try {
+            $response = $client->get('http://localhost:9000/api/auth/admin/dashboard', [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $token,
+                    'Accept' => 'application/json',
+                ]
+            ]);
+
+            $body = json_decode($response->getBody(), true);
+
+            if ($body['code'] == 1000) {
+                $data = $body['result'];
+                return view('admins.home', compact('data'));
+            } else {
+                return redirect()->back()->with('error', 'Unable to fetch dashboard data.');
+            }
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+            $response = $e->getResponse();
+            $responseBodyAsString = $response->getBody()->getContents();
+            $body = json_decode($responseBodyAsString, true);
+
+            return redirect()->back()->with('error', $body['message'] ?? 'An error occurred.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
     }
     public function getAllCustomer()
     {
@@ -230,4 +258,5 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
         }
     }
+    
 }

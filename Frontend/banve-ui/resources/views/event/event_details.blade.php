@@ -85,7 +85,7 @@
 
 </style>
 @section('content')
-<div class="container">
+<div class="container" style="border: 1px solid black; padding: 20px; border-radius: 5px;">
     @if (isset($error))
         <div class="alert alert-danger">
             {{ $error }}
@@ -97,7 +97,7 @@
         <p><strong>Địa chỉ:</strong> {{ $eventData['diaChi'] }}</p>
         <p><strong>Tình trạng:</strong> {{ $eventData['tinhTrang'] }}</p>
 
-        <div class="row">
+        <div class="row" >
             <div class="col-md-8">
                 <h2>Ticket Prices</h2>
                 <ul class="list-unstyled">

@@ -94,18 +94,21 @@ class EventController extends Controller
     public function returnvnpay(Request $request)
     {
         try {
+           
             // Lấy tất cả các tham số trả về từ VNPay
             $vnp_ResponseCode = $request->input('vnp_ResponseCode');
             $vnp_Amount = $request->input('vnp_Amount');
+          
             $vnp_TransactionNo = $request->input('vnp_TransactionNo');
             $vnp_BankCode = $request->input('vnp_BankCode');
             $vnp_OrderInfo = $request->input('vnp_OrderInfo');
             //getbyorderinfor
-            $response = Http::get("http://localhost:8082/api/Ticket/{$orderId}");
+            $response = Http::get("http://localhost:8082/api/Ticket/{$vnp_OrderInfo}");
             $tickets = $response->json();
-            //vnp_ResponseCode =00 thì gửi mail
+           // vnp_ResponseCode =00 thì gửi mail
+           
 
-            return view('event.vnpayreturn', compact('vnp_ResponseCode', 'vnp_Amount', 'vnp_TransactionNo', 'vnp_BankCode','vnp_OrderInfo' ,'tickets'));
+            return view('event.vnpayreturn', compact('vnp_ResponseCode', 'vnp_Amount', 'vnp_TransactionNo', 'vnp_BankCode','vnp_OrderInfo','tickets' ));
 
         } catch (\Exception $e) {
             // Xử lý khi có lỗi kết nối tới API

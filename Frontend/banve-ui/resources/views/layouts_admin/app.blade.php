@@ -104,7 +104,7 @@
             <a href="{{ route('admin.home') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="{{ route('customers.list') }}"><i class="fas fa-calendar-alt"></i> User</a>
             <a href="{{ route('admin.event-admins') }}"><i class="fas fa-tags"></i> Bussiness</a>
-            <a href="{{ route('admin.pending-eadmin') }}"><i class="fas fa-file-contract"></i> Contract</a>
+            <a href="{{ route('admin.pending-eadmin') }}"><i class="fas fa-file-contract"></i> Contract Management</a>
             <a href="#"><i class="fas fa-file-contract"></i> Help</a>
         </div>
         <div class="sidebar-footer">
@@ -124,6 +124,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     @stack('scripts')
 </body>
 </html>

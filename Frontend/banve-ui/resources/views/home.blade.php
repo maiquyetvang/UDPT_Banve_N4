@@ -1,41 +1,38 @@
 
 {{-- resources/views/home.blade.php --}}
-
 @extends('layouts.app')
 
 @section('title', 'Home')
 
 @section('content')
-
-<div class="main-banner">
-    <div class="owl-carousel owl-banner">
-        <div class="item item-1">
-            <div class="header-text">
-                <span class="category">Summer Events</span>
-                <h2>Find Your Perfect Event<br>With Us</h2>
+    <div class="main-banner">
+        <div class="owl-carousel owl-theme owl-banner">
+            <div class="item item-1">
+                <div class="header-text">
+                    <span class="category">Summer Events</span>
+                    <h2>Find Your Perfect Event<br>With Us</h2>
+                </div>
             </div>
-        </div>
-        <div class="item item-2">
-            <div class="header-text">
-                <span class="category">Get Tickets Now</span>
-                <h2>Secure Your Spot<br>Before They Sell Out</h2>
+            <div class="item item-2">
+                <div class="header-text">
+                    <span class="category">Get Tickets Now</span>
+                    <h2>Secure Your Spot<br>Before They Sell Out</h2>
+                </div>
             </div>
-        </div>
-        <div class="item item-3">
-            <div class="header-text">
-                <span class="category">Experience the Best</span>
-                <h2>Join Us for<br>Unforgettable Moments</h2>
+            <div class="item item-3">
+                <div class="header-text">
+                    <span class="category">Experience the Best</span>
+                    <h2>Join Us for<br>Unforgettable Moments</h2>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {{-- EVENT Ở ĐÂY NHA
 ======================================================================================
 ======================================================================================
 ====================================================================================== --}}
-
-
+@include('event.events')
 
 
 
@@ -46,7 +43,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="about-image">
-                    <img src="{{ asset('frontend/images/banner-03.jpg') }}" alt="About Us" class="img-fluid">
+                    <img src="{{ asset('frontend/images/banner-08.jpg') }}" alt="About Us" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">
@@ -96,22 +93,25 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 @push('scripts')
-<script>
-    $(document).ready(function() {
-        $(".owl-banner").owlCarousel({
-            items: 1,
-            loop: true, // Enables continuous looping
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            nav: true,
-            dots: true,
-            navText: ["<div class='owl-prev'><i class='fa fa-chevron-left'></i></div>", "<div class='owl-next'><i class='fa fa-chevron-right'></i></div>"]
+    <script>
+        $(document).ready(function() {
+            $(".owl-banner").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                nav: true,
+                dots: true,
+                navText: ["<div class='owl-prev'><i class='fa fa-chevron-left'></i></div>", "<div class='owl-next'><i class='fa fa-chevron-right'></i></div>"]
+            });
         });
-    });
-</script>
+    </script>
 @endpush
+
+
 

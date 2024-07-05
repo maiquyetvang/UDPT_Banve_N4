@@ -1,6 +1,6 @@
 <!-- resources/views/events/index.blade.php -->
 
-@extends('layouts.app')
+
 <style>
     /* .card {
     
@@ -52,9 +52,17 @@
         border-top-left-radius: 30px; /* Bo tròn góc trên bên trái */
         border-top-right-radius: 30px; /* Bo tròn góc trên bên phải */
     }
+/* Đảm bảo các ảnh trong card có kích thước nhất định */
+.hover-card .card-img-top {
+    border-top-left-radius: 30px; /* Bo tròn góc trên bên trái */
+    border-top-right-radius: 30px; /* Bo tròn góc trên bên phải */
+    object-fit: cover; /* Chỉnh kích thước ảnh sao cho vừa với khung */
+    height: 300px; /* Điều chỉnh chiều cao của ảnh */
+    width: 100%; /* Đảm bảo ảnh nằm trong phạm vi của card */
+}
 </style>
 
-@section('content')
+
         <h2 class="mb-4">Events List</h2>
 
         @if ($errors->any())
@@ -73,7 +81,7 @@
                 <div class="col mb-4">
                     <a href="{{ route('events.show', ['id' => $event['maSk']]) }}" class="card-link">
                         <div class="card h-100 hover-card" style="border-radius: 30px;">
-                            <img src="{{ asset('frontend/images/logo1.png') }}" class="card-img-top" alt="...">
+                            <img src="{{ asset('frontend/images/events/event-' . rand(1, 10) . '.jpg') }}" class="card-img-top" alt="Event Image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $event['ten'] }}</h5>
                                 <p class="card-text1">{{ $event['moTa'] }}</p>
@@ -93,4 +101,3 @@
         @else
             <div class="alert alert-info">No events found.</div>
         @endif
-@endsection
