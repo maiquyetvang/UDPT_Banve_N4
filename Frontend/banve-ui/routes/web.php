@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
@@ -24,6 +24,14 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/event-form', [EventController::class, 'showForm'])->name('event.form');
+Route::get('/events', [EventController::class, 'index'])->name('events.index');
+
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
+
+// Route to handle form submission
+Route::post('/event-form', [EventController::class, 'submitForm'])->name('event.submit');
+Route::get('/returnvnpay', [EventController::class, 'returnvnpay'])->name('events.returnvnpay');
 // Auth
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -69,3 +77,4 @@ Route::middleware(['checkRole:ADMIN'])->group(function () {
     Route::post('admin/eventadmin/reject/{username}', [AdminController::class, 'rejectEventAdmin'])->name('admin.eventadmin.reject');
     Route::post('admin/eventadmin/approve/{username}', [AdminController::class, 'approveEventAdmin'])->name('admin.eventadmin.approve');
 });
+

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="commit" />
+    <list default="true" id="59de9f00-b4c7-4fac-bcab-9cbe85ad39fd" name="Changes" comment="chạy ổn các service APIGateway, AuthenticationService, ProfileService" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -63,10 +64,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
     "Maven.AuthService [clean].executor": "Run",
     "Maven.AuthenticationService [clean].executor": "Run",
     "Maven.AuthenticationService [install].executor": "Run",
+    "Maven.ProfileService [clean].executor": "Run",
+    "Maven.ProfileService [compile].executor": "Run",
+    "Maven.ProfileService [install].executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -82,12 +91,14 @@
     "Spring Boot.Authentication Service.executor": "Run",
     "Spring Boot.AuthenticationService.executor": "Run",
     "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.Demo1Application.executor": "Run",
+    "Spring Boot.ProfileServiceApplication.executor": "Run",
     "Spring Boot.RegistryServer.executor": "Run",
     "Spring Boot.RegistryServerApplication.executor": "Run",
-    "git-widget-placeholder": "maiquyetvang",
+    "git-widget-placeholder": "feature/vohuuanhtuan",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/AuthService/src/main/java/com/udpt_banve/authservice",
+    "last_opened_file_path": "D:/GitHub/UDPT_Banve_N4/MicroService/ProfileService/src/main/java/com/udpt_banve/profileservice/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,6 +107,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -108,12 +120,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\ProfileService\src\main\java\com\udpt_banve\profileservice\config" />
+      <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\AuthService\src\main\resources" />
+      <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\AuthService\src\main\java\com\udpt_banve\authservice\config" />
+      <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\ProfileService\src\main\java\com\udpt_banve\profileservice" />
       <recent name="D:\GitHub\UDPT_Banve_N4\MicroService\AuthService\src\main\java\com\udpt_banve\authservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.udpt_banve.authenticationservice.dto.response" />
-      <recent name="com.udpt_banve.apigateway.dto.response" />
-      <recent name="com.udpt_banve.apigateway.dto.request" />
+      <recent name="com.udpt_banve.profileservice.dto.response" />
+      <recent name="com.udpt_banve.profileservice.dto.request" />
+      <recent name="com.udpt_banve.authservice.dto.request" />
+      <recent name="com.udpt_banve.profileservice.config" />
+      <recent name="com.udpt_banve.profileservice.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -125,7 +143,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Auth">
+  <component name="RunManager" selected="Spring Boot.ProfileServiceApplication">
     <configuration name="Api Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -135,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Auth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="Authentication Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="AuthService" />
@@ -144,20 +162,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Authentication Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="AuthenticationService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.authenticationservice.AuthenticationServiceApplication" />
+    <configuration name="GoogleLogin" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="GoogleLogin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Demo1Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProfileService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.profileservice.ProfileServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Auth" />
       <item itemvalue="Spring Boot.Api Gateway" />
       <item itemvalue="Spring Boot.Authentication Service" />
+      <item itemvalue="Spring Boot.ProfileServiceApplication" />
+      <item itemvalue="Spring Boot.GoogleLogin" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.GoogleLogin" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -194,7 +229,15 @@
       <workItem from="1718903941935" duration="1574000" />
       <workItem from="1718932323341" duration="1447000" />
       <workItem from="1718933799659" duration="101000" />
-      <workItem from="1718933981929" duration="1655000" />
+      <workItem from="1718933981929" duration="7601000" />
+      <workItem from="1718958118646" duration="2856000" />
+      <workItem from="1718980389043" duration="20000" />
+      <workItem from="1718980678694" duration="2910000" />
+      <workItem from="1719016810951" duration="7587000" />
+      <workItem from="1719031175198" duration="644000" />
+      <workItem from="1719032116620" duration="11270000" />
+      <workItem from="1719098893950" duration="24506000" />
+      <workItem from="1719136233189" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -252,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718932908582</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chạy ổn các service APIGateway, AuthenticationService, ProfileService">
+      <option name="closed" value="true" />
+      <created>1719136886575</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719136886575</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +333,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="chạy ổn các service APIGateway, AuthenticationService, ProfileService" />
+    <option name="LAST_COMMIT_MESSAGE" value="chạy ổn các service APIGateway, AuthenticationService, ProfileService" />
   </component>
 </project>

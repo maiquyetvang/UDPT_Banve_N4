@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 18665389249-rv54mm7gl1igasegvqfo7um8fmadu442.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid, profile, email
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/googleProfile
+#            redirect-uri: http://localhost:8088/login/oauth2/code/google
+server:
+  port: 8088

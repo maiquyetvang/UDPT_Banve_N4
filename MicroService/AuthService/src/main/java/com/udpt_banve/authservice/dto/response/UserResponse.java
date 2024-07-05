@@ -15,9 +15,9 @@ import java.time.LocalDate;
 public class UserResponse {
     String id;
     String username;
-    String firstName;
-    String lastName;
+//    String firstName;
+//    String lastName;
     String email;
-    LocalDate dob;
+//    LocalDate dob;
     String role;
 }

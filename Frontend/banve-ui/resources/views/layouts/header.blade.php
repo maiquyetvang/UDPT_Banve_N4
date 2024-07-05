@@ -1,4 +1,6 @@
+
 <!-- resources/views/layouts/header.blade.php -->
+
 
 <header class="bg-light py-2">
     <div class="container">
@@ -39,6 +41,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
+
                             <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
@@ -51,6 +54,7 @@
                                     <a class="dropdown-item" href="{{ route('event.hot') }}">Hot Event</a>
                                     <a class="dropdown-item" href="{{ route('eadmin.signup') }}">Create Event</a>
                                 </div>
+
                             </li>
                             <li class="nav-item {{ request()->routeIs('help.index') ? 'active' : '' }}">
                                 <a class="nav-link" href="#">Help</a>
@@ -58,6 +62,7 @@
                         </ul>
                     </div>
                 </nav>
+
                 <div class="auth-links ml-3">
                     @if(Session::has('user'))
                         <div class="nav-item dropdown">
@@ -83,6 +88,7 @@
                     @else
                         <a href="{{ route('login') }}" class="nav-link">Log In</a>
                         <a href="{{ route('choose.registration') }}" class="nav-link">Sign Up</a>
+
                     @endif
                 </div>
             </div>
