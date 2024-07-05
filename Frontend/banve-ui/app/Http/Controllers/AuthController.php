@@ -1,12 +1,13 @@
 <?php
 
-// app/Http/Controllers/AuthController.php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Session;
+
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -20,22 +21,40 @@ class AuthController extends Controller
         $client = new Client();
 
         try {
-            $response = $client->post('http://localhost:8081/auth/login', [
+
+            $response = $client->post('http://localhost:9000/api/auth/login', [
                 'json' => [
-                    'username' => $request->input('email'),
+                    'username' => $request->input('username'),
+
                     'password' => $request->input('password')
                 ]
             ]);
 
             $body = json_decode($response->getBody(), true);
 
-            if ($body['code'] == 1000) {
+
+            if (isset($body['result'])) {
+                $result = $body['result'];
+
                 // Lưu token và thông tin người dùng vào session
-                Session::put('jwt_token', $body['result']['token']);
-                Session::put('user', $body['result']);
-                return redirect()->route('home.index'); // Chuyển hướng về trang chủ
+                Session::put('jwt_token', $result['token']);
+                Session::put('user', $result);
+
+                if ($result['role'] === 'CUSTOMER') {
+                    return redirect()->route('home.index'); // Chuyển hướng về trang chủ
+                } 
+                elseif ($result['role'] === 'EVENT_ADMIN') {
+                    return redirect()->route('eadmin.home'); // Chuyển hướng về trang quản trị event
+                } 
+                elseif ($result['role'] === 'ADMIN') {
+                    return redirect()->route('admin.home'); // Chuyển hướng về trang quản trị event
+                } 
+                else {
+                    return redirect()->back()->with('error', 'Role không hợp lệ.');
+                }
             } else {
-                return redirect()->back()->with('error', $body['message']);
+                return redirect()->back()->with('error', $body['message'] ?? 'Đăng nhập thất bại.');
+
             }
         } catch (\GuzzleHttp\Exception\ClientException $e) {
             // Lấy thông báo lỗi từ response của API
@@ -54,4 +73,11 @@ class AuthController extends Controller
         Session::forget(['jwt_token', 'user']);
         return redirect()->route('home.index');
     }
+
+
+    public function showRegistrationChoice()
+    {
+        return view('choose_registration');
+    }
+
 }

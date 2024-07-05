@@ -48,11 +48,27 @@
             background-color: #f8f9fa;
         }
 
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+
         #error-message {
             color: red;
             margin-top: .25rem;
             display: none;
         }
+
+        /* Custom icon size for home */
+    .fa-home {
+        font-size: 1.5rem; /* Adjust the font-size as needed */
+        margin-right: 0.5rem; /* Optional: Add some spacing */
+    }
+
     </style>
 </head>
 <body>
@@ -62,6 +78,8 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
+
+                            <a href="{{ route('home.index') }}" class="btn btn-link text-dark"><i class="fas fa-home"></i></a>
 
                             <h3 class="mb-5">Sign in</h3>
 
@@ -75,20 +93,26 @@
                                 @csrf {{-- Laravel CSRF token --}}
                                 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="email" name="email" class="form-control form-control-lg"
+
+                                    <input type="username" id="username" name="username" class="form-control form-control-lg"
                                         required>
-                                    <label class="form-label" for="email">Email</label>
+                                    <label class="form-label" for="username">Username or email</label>
+
                                 </div>
     
                                 <div class="form-outline mb-4">
                                     <input type="password" id="password" name="password" class="form-control form-control-lg"
                                         required>
                                     <label class="form-label" for="password">Password</label>
+
+                                    <i class="fas fa-eye password-toggle" id="toggle-password"></i>
                                 </div>
     
-                                <div class="form-check d-flex justify-content-start mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="remember" name="remember">
-                                    <label class="form-check-label" for="remember"> Remember password </label>
+                               
+    
+                                <div class="mb-4">
+                                    <span>Don't have an account? <a href="{{ route('choose.registration') }}">Sign Up</a></span>
+
                                 </div>
     
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
@@ -114,28 +138,45 @@
 
     <!-- Link to MDB JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.8.0/mdb.min.js"></script>
-    <!-- Custom JavaScript for Form Validation -->
+
+    <!-- Custom JavaScript for Form Validation and Toggle Password Visibility -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('login-form');
-            const emailInput = document.getElementById('email');
+            const usernameInput = document.getElementById('username');
             const passwordInput = document.getElementById('password');
+            const rePasswordInput = document.getElementById('repassword');
             const errorMessage = document.getElementById('error-message');
             const sessionError = document.getElementById('session-error');
+            const togglePassword = document.getElementById('toggle-password');
+            
 
             form.addEventListener('submit', function(event) {
                 // Kiểm tra không để trống
-                if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
-                    errorMessage.innerText = 'Email and Password cannot be empty';
+                if (usernameInput.value.trim() === '' || passwordInput.value.trim() === '') {
+                    errorMessage.innerText = 'username and Password cannot be empty';
+
                     errorMessage.style.display = 'block';
                     setTimeout(() => errorMessage.style.display = 'none', 3000);
                     event.preventDefault();
                     return;
                 }
 
-                // Kiểm tra định dạng email
-                if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailInput.value)) {
-                    errorMessage.innerText = 'Invalid email address';
+
+               
+                // Kiểm tra độ dài của username
+                if (usernameInput.value.length < 4) {
+                    errorMessage.innerText = 'Username must be at least 4 characters long';
+                    errorMessage.style.display = 'block';
+                    setTimeout(() => errorMessage.style.display = 'none', 3000);
+                    event.preventDefault();
+                    return;
+                }
+
+                // Kiểm tra độ dài của mật khẩu
+                if (passwordInput.value.length < 6) {
+                    errorMessage.innerText = 'Password must be at least 6 characters long';
+
                     errorMessage.style.display = 'block';
                     setTimeout(() => errorMessage.style.display = 'none', 3000);
                     event.preventDefault();
@@ -145,11 +186,23 @@
                 // Nếu validate thành công, có thể submit form
             });
 
+
+            // Toggle password visibility
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+
+          
+
             // Nếu có lỗi từ session, ẩn nó sau 3 giây
             if (sessionError) {
                 setTimeout(() => sessionError.style.display = 'none', 3000);
             }
         });
+
     </script>
 </body>
 </html>

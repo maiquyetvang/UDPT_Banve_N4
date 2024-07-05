@@ -73,6 +73,75 @@ body {
     color: #000;
 }
 
+/* Nav-bar và nav-item */
+
+.navbar-nav .nav-item .nav-link {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(10px);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+    background-color: #686f78;
+    color: #fff;
+}
+
+/* Dropdown styling for user menu */
+.auth-links .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(10px);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.auth-links .dropdown:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.auth-links .dropdown-item {
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-links .dropdown-item:hover {
+    background-color: #686f78;
+    color: #fff;
+}
+
+/* Styling for other components remains unchanged */
+
+
 
 /* Style cho phần tìm kiếm */
 .form-inline {
@@ -109,12 +178,24 @@ body {
     margin-left: -15px; /* Khoảng cách giữa các liên kết */
 }
 
+
+
+
 .custom-content {
     min-height: 1000px; /* Độ cao tối thiểu là 500px */
-    /* background-color: #ffffcc; Màu nền là màu vàng */
+    background-color: #fff; 
+    /* Màu nền là màu vàng */
+
     padding: 20px; /* Phần padding để tạo khoảng cách với các thành phần khác */
 }
 
+
+
+
+/* ----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- */
 
 .footer-wrapper {
     background-color: #16222A;
@@ -134,3 +215,194 @@ body {
 .footer .text-reset:hover {
     color: #cccccc; /* Màu khi hover */
 }
+
+/* Existing CSS for phone-email, social-icons, logo, form-inline, navbar-nav, etc. */
+
+/* public/frontend/css/app.css */
+/* public/frontend/css/app.css */
+
+.main-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner .item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Ensure full height for banners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-banner .item-1 {
+    background-image: url('../images/banner-01.jpg');
+}
+
+.main-banner .item-2 {
+    background-image: url('../images/banner-02.jpg');
+}
+
+.main-banner .item-3 {
+    background-image: url('../images/banner-04.jpg');
+}
+
+.main-banner .header-text {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+}
+
+.main-banner .header-text .category {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 6px 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.main-banner .header-text .category em {
+    font-style: normal;
+    color: #f35525;
+}
+
+.main-banner .header-text h2 {
+    font-size: 48px; /* Adjusted font size for better visibility */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.main-banner .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.main-banner .owl-nav .owl-prev,
+.main-banner .owl-nav .owl-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-banner .owl-nav .owl-prev:hover,
+.main-banner .owl-nav .owl-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-banner .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-banner .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-banner .owl-dots .owl-dot.active {
+    background-color: #f35525;
+}
+/* New CSS for the about section */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-section .about-image {
+    margin-bottom: 30px;
+}
+
+.about-section .about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-section .about-content {
+    padding: 20px;
+}
+
+.about-section .about-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f35525;
+    margin-bottom: 10px;
+}
+
+.about-section .about-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-section .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section .about-content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.about-section .about-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-section .about-content ul li i {
+    font-size: 1.2rem;
+    color: #f35525;
+    margin-right: 10px;
+}
+/* public/css/app.css */
+
+/* Tăng kích thước icon trong các phần content */
+.feature-icon i {
+    font-size: 2.5rem; /* Tăng kích thước icon */
+    color: #f35525; /* Màu sắc cho icon */
+    margin-bottom: 10px; /* Khoảng cách dưới icon */
+}
+
+/* Điều chỉnh văn bản của phần content */
+.feature-box {
+    text-align: center; /* Căn giữa nội dung */
+    padding: 20px;
+}
+
+.feature-box h4 {
+    margin-top: 10px; /* Khoảng cách phía trên tiêu đề */
+    font-size: 1.2rem; /* Kích thước tiêu đề */
+}
+
+.feature-box p {
+    margin-top: 10px; /* Khoảng cách phía trên đoạn văn */
+    font-size: 1rem; /* Kích thước đoạn văn */
+}
+

@@ -1,0 +1,74 @@
+.form-outline {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-outline input.form-control, .form-outline select.form-control {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+}
+
+.form-outline input.form-control:focus, .form-outline select.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+}
+
+.form-outline .form-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    transition: .2s ease-out;
+    font-size: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.form-outline .form-control:focus ~ .form-label,
+.form-outline .form-control:not(:placeholder-shown) ~ .form-label,
+.form-outline select.form-control:focus ~ .form-label,
+.form-outline select.form-control:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    transform: translateY(-100%);
+    left: .75rem;
+    font-size: .75rem;
+    background-color: #f8f9fa;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    margin-top: .25rem;
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-column {
+    flex: 0 0 48%;
+}
+
+/* Custom style for Back button */
+.btn-back {
+    background-color: #d3d3d3; /* Light gray color */
+    color: #000;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-back:hover {
+    background-color: #a9a9a9; /* Darker gray color on hover */
+}

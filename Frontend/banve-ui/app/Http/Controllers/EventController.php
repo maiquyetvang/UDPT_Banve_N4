@@ -179,6 +179,16 @@ class EventController extends Controller
         return redirect()->back()->with('success', 'Event and tickets created successfully!');
 
     }
+  public function find()
+    {
+        // Logic for finding events
+        return view('events.find');
+    }
+
+    public function hot()
+    {
+        // Logic for hot events
+        return view('events.hot');
+    }
 
 }
-

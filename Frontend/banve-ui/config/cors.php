@@ -15,12 +15,14 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie', 'http://localhost:8000/events/*','events/*'],
 
-    'allowed_methods' => ['POST'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_origins' => ['http://localhost:8083/api/payment/create'],
-    
+    'allowed_methods' => ['*'],
+
+    'allowed_origins' => ['*'],
+
+
     'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
@@ -29,6 +31,7 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => true,
+
+    'supports_credentials' => false,
 
 ];
