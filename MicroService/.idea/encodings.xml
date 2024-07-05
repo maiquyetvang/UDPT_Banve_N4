@@ -3,6 +3,9 @@
   <component name="Encoding">
     <file url="file://$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AuthService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EventManagament/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PaymentSevice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TicketService/src/main/java" charset="UTF-8" />
   </component>
 </project>

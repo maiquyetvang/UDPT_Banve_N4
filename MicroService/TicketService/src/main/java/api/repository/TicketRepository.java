@@ -6,4 +6,5 @@ import java.util.List;
 public interface TicketRepository extends MongoRepository<Ticket, String>{
 	List<Ticket> findBymaKh(String makh);
 	List<Ticket> findBymaSk(String mask);
+	List<Ticket> findByOrderId(int orderId);
 }

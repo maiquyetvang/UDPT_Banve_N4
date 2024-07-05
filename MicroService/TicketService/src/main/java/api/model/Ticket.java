@@ -5,100 +5,111 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Ticket") 
 public class Ticket {
-
-	@Id
-	 private String maVe; 
-	 private String tenVe;
-	 private String moTa; 
-	 private String gia; 
-	 private String loaiVe; 
-	 private int tongSoVe;
+	 private int stt;
+	 private String gia;
+	 private String loaiVe;
+	 private String tinhtrang;
 	 private String maSk;
+	 private String maVe;
+	@Id
+	 private String id;
+	 private String tenSk;
 	 private String maKh;
-	    
-	 public String getMaSk() { 
-	  return maSk; 
-	 } 
-	 public void setMaSk(String maSk) { 
-	  this.maSk = maSk; 
-	 } 
-	 public String getMaKh() { 
-		  return maKh; 
-		 } 
-		 public void setMaKh(String maKh) { 
-		  this.maKh = maKh; 
-		 } 
-	    // Getter for ten
-	    public String getTenVe() {
-	        return tenVe;
-	    }
+	 private int orderId;
 
-	    // Setter for ten
-	    public void setTenVe(String tenVe) {
-	        this.tenVe = tenVe;
-	    }
+	public String getId() {
+		return id;
+	}
 
-	    // Getter for moTa
-	    public String getMoTa() {
-	        return moTa;
-	    }
+	public void setId(String id) {
+		id = id;
+	}
+	public int getStt() {
+		return stt;
+	}
 
-	    // Setter for moTa
-	    public void setMoTa(String moTa) {
-	        this.moTa = moTa;
-	    }
+	public void setStt(int stt) {
+		this.stt = stt;
+	}
+	public int getOrderId() {
+		return orderId;
+	}
 
-	    // Getter for mave
-	    public String getMaVe() {
-	        return maVe;
-	    }
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
 
-	    // Setter for mave
-	    public void setMaVe(String maVe) {
-	        this.maVe = maVe;
-	    }
+	public String getMaVe() {
+		return maVe;
+	}
 
-	    public String getGia() {
-	        return gia;
-	      }
+	public void setMaVe(String maVe) {
+		this.maVe = maVe;
+	}
+	public String getGia() {
+		return gia;
+	}
 
-	      public void setGia(String gia) {
-	        this.gia = gia;
-	      }
+	public void setGia(String gia) {
+		this.gia = gia;
+	}
 
-	      public String getLoaiVe() {
-	        return loaiVe;
-	      }
+	public String getLoaiVe() {
+		return loaiVe;
+	}
 
-	      public void setLoaiVe(String loaiVe) {
-	        this.loaiVe = loaiVe;
-	      }
+	public void setLoaiVe(String loaiVe) {
+		this.loaiVe = loaiVe;
+	}
 
-	      public int getTongSoVe() {
-	        return tongSoVe;
-	      }
+	public String getTinhtrang() {
+		return tinhtrang;
+	}
 
-	      public void setTongSoVe(int tongSoVe) {
-	        this.tongSoVe = tongSoVe;
-	      }
-	    // Producer method to create an Event object
-	    public Ticket(String maVe, String tenVe, String moTa, String gia, String loaiVe, int tongSoVe, String maSk, String maKh) {
-	        super();
-	        this.maVe = maVe;
-	        this.tenVe = tenVe;
-	        this.moTa = moTa;
-	        this.gia = gia;
-	        this.loaiVe = loaiVe;
-	        this.tongSoVe = tongSoVe;
-	        this.maSk = maSk;
-	        this.maKh = maKh;
-	    }
-	    
-	    public Ticket() { 
-	    			 super(); 
-	    		 } 
+	public void setTinhtrang(String tinhtrang) {
+		this.tinhtrang = tinhtrang;
+	}
+
+	public String getMaSk() {
+		return maSk;
+	}
+
+	public void setMaSk(String maSk) {
+		this.maSk = maSk;
+	}
+
+	public String getTenSk() {
+		return tenSk;
+	}
+
+	public void setTenSk(String tenSk) {
+		this.tenSk = tenSk;
+	}
+
+	public String getMaKh() {
+		return maKh;
+	}
+
+	public void setMaKh(String maKh) {
+		this.maKh = maKh;
+	}
 
 
-	
+	public Ticket(String id,int stt, String maVe, String gia, String loaiVe, String tinhtrang, String maSk, String tenSk, String maKh,int orderId) {
+		super();
+		this.id = id;
+		this.stt = stt;
+		this.maVe = maVe;
+		this.gia = gia;
+		this.loaiVe = loaiVe;
+		this.tinhtrang = tinhtrang;
+		this.maSk = maSk;
+		this.tenSk = tenSk;
+		this.maKh = maKh;
+		this.orderId = orderId;
+	}
+	public Ticket() {
+		super();
+	}
 
 }

@@ -44,7 +44,7 @@ public class Controller {
                 vnp_Params.put("vnp_BankCode", bankCode);
             }
             vnp_Params.put("vnp_TxnRef", vnp_TxnRef);
-            vnp_Params.put("vnp_OrderInfo", "Thanh toan don hang:" + vnp_TxnRef);
+            vnp_Params.put("vnp_OrderInfo", vnp_TxnRef);
             vnp_Params.put("vnp_OrderType", orderType);
 
             String locate = paymentRequest.getLanguage();
@@ -156,5 +156,7 @@ public class Controller {
             errorResponse.addProperty("data", e.getMessage());
             return errorResponse.toString();
         }
+
     }
+
 }

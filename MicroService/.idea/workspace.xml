@@ -5,54 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad344bc-9f14-42c5-8e68-8b3385d2e793" name="Changes" comment="">
-      <change beforePath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" beforeDir="false" afterPath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" beforeDir="false" afterPath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/udpt_banve/authenticationservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/shelf/Uncommitted_changes_before_Update_at_21_6_2024_0_17__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2i5poo1Xln8qWvSe4LGoFCIjFhQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in RegistryServer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vanniee/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/RegistryServer",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in RegistryServer.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthenticationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EventManagamentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentSeviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TicketServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/vohuuanhtuan&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/HT2024/HK2/UDPT/CK/UDPT_Banve_N4-feature-vohuuanhtuan/UDPT_Banve_N4-feature-vohuuanhtuan/MicroService/ProfileService&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationService">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="MicroService" />
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TicketServiceApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="MicroService" />
-      <option name="filePath" />
+    <configuration name="AuthServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="AuthService (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="AuthService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.authservice.AuthServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,6 +112,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EventManagamentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EventManagament" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.EventManagamentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentSeviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="PaymentSevice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.PaymentSeviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistryServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="RegistryServer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.udpt_banve.RegistryServerApplication" />
@@ -71,7 +133,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicketServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TicketService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="api.TicketServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Spring Boot.EventManagamentApplication" />
+      <item itemvalue="Spring Boot.PaymentSeviceApplication" />
+      <item itemvalue="Spring Boot.TicketServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication (1)" />
       <item itemvalue="Spring Boot.AuthenticationService" />
       <item itemvalue="Spring Boot.RegistryServer" />
     </list>
@@ -79,8 +154,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -93,6 +168,14 @@
       <option name="presentableId" value="Default" />
       <updated>1718790469295</updated>
       <workItem from="1718790470406" duration="227000" />
+      <workItem from="1719854252540" duration="387000" />
+      <workItem from="1719854649079" duration="3321000" />
+      <workItem from="1719893351957" duration="1300000" />
+      <workItem from="1719930226223" duration="1026000" />
+      <workItem from="1719961071861" duration="6370000" />
+      <workItem from="1720003073404" duration="8004000" />
+      <workItem from="1720055796497" duration="9749000" />
+      <workItem from="1720078309863" duration="10485000" />
     </task>
     <servers />
   </component>

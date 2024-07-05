@@ -8,11 +8,18 @@
         <option value="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/RegistryServer/pom.xml" />
         <option value="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/AuthenticationService/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/../api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/MicroService/AuthService/pom.xml" />
+        <option value="$PROJECT_DIR$/AuthService/pom.xml" />
+        <option value="$PROJECT_DIR$/EventManagament/pom.xml" />
+        <option value="$PROJECT_DIR$/PaymentSevice/pom.xml" />
+        <option value="$PROJECT_DIR$/TicketService/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$USER_HOME$/Documents/workspace-spring-tool-suite-4-4.22.1.RELEASE/RegistryServer/pom.xml" />
+        <option value="$PROJECT_DIR$/../api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../Final_Project/UDPT_Banve_N4/MicroService/AuthService/pom.xml" />
       </set>
     </option>
   </component>

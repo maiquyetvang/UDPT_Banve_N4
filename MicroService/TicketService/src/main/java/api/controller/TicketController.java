@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,29 +18,63 @@ import api.model.Ticket;
 import api.publisher.Publisher;
 import api.repository.TicketRepository;
 
-@RestController 
+@RestController
 @RequestMapping("/api")
 public class TicketController {
-	@Autowired 
-	TicketRepository repo; 
-  
+	@Autowired
+	TicketRepository repo;
+
     @Autowired
     private Publisher publisher;
-    
+
 	@PostMapping("/Ticket")
-	public ResponseEntity<Ticket> ThemVe(@RequestBody Ticket ve) { 
-	try { 
-		// nhạn được api thanh toan thanh cong
-	Ticket _ve = repo.save(new Ticket(ve.getMaVe(), ve.getTenVe(), ve.getMoTa(), ve.getGia(), ve.getLoaiVe(), ve.getTongSoVe(),ve.getMaSk(), ve.getMaKh())); 
-    
-	String message = " da thanh toan: " + _ve.getMaVe();
-    // send to RabbitMQ
-    publisher.produceMsg(message);
-	return new ResponseEntity<>(_ve, HttpStatus.CREATED); 
-	} catch (Exception e) { 
-	return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR); 
-	} 
-	} 
+    public ResponseEntity<Ticket> themVe(@RequestBody Ticket ve) {
+
+        try {
+            Ticket savedTicket = repo.save(ve);
+
+            return new ResponseEntity<>(savedTicket, HttpStatus.CREATED);
+        } catch (Exception e) {
+
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping("/Ticket/{orderId}")
+    public ResponseEntity<List<Ticket>> getByOrderInfo(@PathVariable("orderId") int orderId) {
+        try {
+            List<Ticket> tickets = repo.findByOrderId(orderId);
+
+            if (tickets.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+
+            return new ResponseEntity<>(tickets, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @PutMapping("/updateTicketStatus/{orderId}")
+    public ResponseEntity<?> updateTicketStatus(@PathVariable("orderId") int orderId) {
+        try {
+            // Tìm tất cả các vé với OrderId
+            List<Ticket> tickets = repo.findByOrderId(orderId);
+
+            // Kiểm tra nếu không có vé nào với OrderId đã cho
+            if (tickets.isEmpty()) {
+                return new ResponseEntity<>("OrderId không tồn tại", HttpStatus.NOT_FOUND);
+            }
+
+            // Cập nhật trạng thái 'tinhtrang' cho tất cả các vé
+            tickets.forEach(ticket -> ticket.setTinhtrang("đã thanh toán"));
+
+            // Lưu các thay đổi
+            repo.saveAll(tickets);
+
+            return new ResponseEntity<>("Cập nhật trạng thái vé thành công", HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Đã xảy ra lỗi: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     // Endpoint để mua vé bởi người dùng
     @PostMapping("/buyTicket/{userId}")
     public ResponseEntity<?> buyTicket(@PathVariable String userId, @RequestBody Ticket ticket) {
@@ -59,13 +95,13 @@ public class TicketController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-	
+
     @GetMapping("/Event/Ticket/{maSk}")
     public ResponseEntity<List<Ticket>> getTicketsByEventId(@PathVariable("maSk") String maSk) {
     	try
         {
   		  List<Ticket> Ticketlst = new ArrayList<Ticket>();
-  		  repo.findBymaSk(maSk).forEach(Ticketlst::add);		  
+  		  repo.findBymaSk(maSk).forEach(Ticketlst::add);
          if(Ticketlst.isEmpty())
             {
           	  return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -78,15 +114,15 @@ public class TicketController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @GetMapping("Customer/Ticket/{makh}") 
-	public ResponseEntity<List<Ticket>> XemDanhSachVeByKH(@PathVariable("makh") String makh) { 
+    @GetMapping("Customer/Ticket/{makh}")
+	public ResponseEntity<List<Ticket>> XemDanhSachVeByKH(@PathVariable("makh") String makh) {
 	  try
       {
 		  List<Ticket> Ticketlst = new ArrayList<Ticket>();
-		  repo.findBymaKh(makh).forEach(Ticketlst::add);		  
+		  repo.findBymaKh(makh).forEach(Ticketlst::add);
        if(Ticketlst.isEmpty())
           {
-        	  return new ResponseEntity<>(HttpStatus.NO_CONTENT); 
+        	  return new ResponseEntity<>(HttpStatus.NO_CONTENT);
           }
 
           return new ResponseEntity<>(Ticketlst, HttpStatus.OK);
