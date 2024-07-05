@@ -22,6 +22,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>ID</th>
                             <th>Username</th>
                             <th>Full Name</th>
@@ -33,21 +34,22 @@
                     <tbody>
                         @foreach ($eventAdmins as $eventAdmin)
                         <tr>
+                            <td>{{ $loop->iteration }}</td>
                             <td>{{ $eventAdmin['id'] }}</td>
                             <td>{{ $eventAdmin['username'] }}</td>
                             <td>{{ $eventAdmin['fullName'] }}</td>
                             <td>{{ $eventAdmin['email'] }}</td>
                             <td>{{ $eventAdmin['status'] }}</td>
                             <td>
-                                <form action="{{ route('admin.eventadmin.reject', ['username' => $eventAdmin['username']]) }}" method="POST" style="display:inline;">
+                                <form action="{{ route('admin.eventadmin.reject', $eventAdmin['username']) }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-sm btn-danger">Từ chối</button>
                                 </form>
-                                <form action="{{ route('admin.eventadmin.approve', ['username' => $eventAdmin['username']]) }}" method="POST" style="display:inline;">
+                                <form action="{{ route('admin.eventadmin.approve', $eventAdmin['username']) }}" method="POST" style="display:inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-sm btn-primary">Duyệt</button>
                                 </form>
-                                <a href="{{ route('admin.eventadmin.detail', ['username' => $eventAdmin['username']]) }}" class="btn btn-sm btn-info">Detail</a>
+                                <a href="{{ route('admin.adminevent.detail',  $eventAdmin['username']) }}" class="btn btn-sm btn-info">Chi tiết</a>
                             </td>
                         </tr>
                         @endforeach
